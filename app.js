@@ -22,6 +22,7 @@ mustache.compile = function(str, opt) {
 
 app.configure(function(){
   app.set('views', __dirname + '/views');
+  app.set('view options', {layout: false});
   // 无需后缀
   app.set('view engine', 'jade');
   // 映射后缀为.mu的文件由mustache来渲染
@@ -43,8 +44,9 @@ app.configure('production', function(){
 
 // Routes
 app.get('/', routes.index);
-app.get('signup', routes.signup);
-app.post('signup', routes.signup_post);
+app.get('/signup', routes.signup);
+app.post('/signup', routes.signup_post);
+app.get('/o2o/', routes.o2o);
 
 app.listen(3000, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
