@@ -1,76 +1,18 @@
-extends layout
+extends tpls/layout
+
+block header
+    h1 Memo's layout Test
 
 block content
-    .sidebar
-        block sidebar
-            p this is the sidebar
-    // This is Comment.
-    //- This line will not output.
-    h1 #{user.name}'s DEAP Test
-    h3 who is #{user.name}? He's a #{user.age} yeas old young man.
-    label Username:
-        input(name="#{user['name']}")
     ul
-        // 使用冒号从而不用折行
-        li.first: a(href="###") This page 
-        li.second: b hahahaha
-        li.third <span>aaa</span>
-            strong 折行
+        li line1
+        li line2
+        li line3
 
+block footer
+    p @memo
 
-    - var obj ={ name:'lois', age:'21' }
-    tagClass = ['hover', 'what']
-    //- 可以在tag后面直接加上'.'， 来使后面的文本直接多行输出。
-    pre.
-        Hey!
-        Hello World!
-    //- 添加class，可以这样用数组
-    p(class=tagClass)
-        |Look!
-        br
-        | This is !{obj.name}!
-    a(href='/name/'+obj.name+'/') To !{obj.name} Home
-    br
-    a(href='/name/'+obj.name+'/')= obj.name
-    br
-
-    div.
-        <ul>
-            <li>aaa</li>
-            <li>bbb</li>
-            <li>ccc !{obj.name}</li>
-            <li>ddd</li>
-            <li>eee</li>
-        </ul>
-
-    div
-        |<ul>
-        |<li>aaa</li>
-        |<li>bbb</li>
-        |<li>ccc</li>
-        br
-        |<li>ddd</li>
-        |<li>eee</li>
-        |</ul>
-
-    //- case Test
-    // This is a variable
-    count = 10
-    p \=========================
-    =count
-    p \=========================
-    // This line will output as HTML
-    count 100000000000000000000 
-    case count
-        when 10
-            count = 20
-            p Oh yeah! This is !{count}
-        when 20
-            p WTF!!
-        default
-            p ASAP.
-
-    -if (count!=20)
-        p It's 20!
-    -else
-        p I don't have ideas...
+block script_foot
+    script
+        document.write('Hello world');
+        console.log('test');

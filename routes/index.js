@@ -1,18 +1,33 @@
+var pageConfig = {
+    useYUI: true,
+    title: 'Memo\'s DEAP Project'
+};
+
+function mix(receiver, supplier, override) {
+    override = (override !== false);
+    for (var i in supplier) {
+        if (!receiver[i] || override) {
+            receiver[i] = supplier[i];
+        }
+    }
+}
 
 /**
  * GET home page.
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
+    mix(pageConfig, {title:'Express'});
+    res.render('index',pageConfig);
 }
 
 /**
  * 注册页
  */
 exports.signup = function(req, res) {
-    var opt = {};
-    res.render('signup', opt);
+    mix(pageConfig, {
+    });
+    res.render('signup', pageConfig);
 }
 exports.signup_post = function(req, res) {
 }
@@ -21,10 +36,13 @@ exports.signup_post = function(req, res) {
  * 一对一
  */
 exports.o2o = function(req, res) {
-    var opt = {user: {
-        name: 'Memo',
-        age: 22
-    }};
+    mix(pageConfig, {
+        user: {
+            name: 'Memo',
+            age: 22
+        },
+        title: 'Memo Love Lois'
+    });
 
-    res.render('o2o', opt);
+    res.render('o2o', pageConfig);
 }
