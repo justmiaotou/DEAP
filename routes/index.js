@@ -1,5 +1,6 @@
 var pageConfig = {
     useYUI: true,
+    useCommonCss: true,
     title: 'Memo\'s DEAP Project'
 };
 

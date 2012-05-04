@@ -1,18 +1,26 @@
-extends tpls/layout
+extends tpls/media
+
+block script_head
+    script(src='localhost:8765//socket.io/socket.io.js')
+
+block css
+    link(rel='stylesheet', href='/stylesheets/o2o.css')
 
 block header
-    h1 Memo's layout Test
+    h1 #{user.name} 的会话
 
-block content
-    ul
-        li line1
-        li line2
-        li line3
+block video
+    video()
 
-block footer
-    p @memo
+block canvas
+//    canvas(width='800px', height='600px')
+
+block message_box
+    #o2o-msg-box
 
 block script_foot
     script
-        document.write('Hello world');
-        console.log('test');
+        console.log('script');
+        console.log('script');
+        console.log('script');
+        console.log('script');
