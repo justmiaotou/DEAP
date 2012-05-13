@@ -16,7 +16,6 @@ function mix(receiver, supplier, override) {
 /**
  * GET home page.
  */
-
 exports.index = function(req, res){
     mix(pageConfig, {title:'Express'});
     res.render('index',pageConfig);
