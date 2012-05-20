@@ -20,7 +20,7 @@ mustache.compile = function(str, opt) {
 };
 
 app.configure(function(){
-    app.set('views', __dirname + '/views');
+    app.set('views', __dirname + '/app/views');
     // 使jade的layout方式生效
     app.set('view options', {layout: false});
     // 渲染jade文件时无需后缀
