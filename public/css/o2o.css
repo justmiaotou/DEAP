@@ -1,0 +1,20 @@
+@charset 'utf-8';
+
+.com-width { max-width:1190px; min-width:1050px; width:auto; }
+.vertical-b { vertical-align:bottom; }
+
+.main .content-wrapper { width:auto; min-width:670px; }
+.mc-header h1 { font-size:20px; line-height:2; border-bottom:2px dashed #AAA; text-indent:1em; font-weight:bold; }
+.connect-detail { padding:0px 20px; width:300px; position:absolute; top:5px; left:660px; }
+#conn-addr { height:24px; padding-left:3px; width:150px; margin:0 10px; }
+
+.main .com-block { border:2px dashed #8ED6E5; }
+
+#o2o-msg-box .msg-show { width:400px; height:300px; }
+#o2o-msg-box .msg-input { width:400px; height:300px; }
+#o2o-msg-box .msg-input textarea { width:390px; height:250px; font-size:20px; padding:5px; }
+#o2o-msg-box .msg-input .submit { height:37px; }
+
+.content-wrapper .title { position:absolute; width:70px; background:rgba(243, 152, 0, .4); line-height:1.5; text-align:center; }
+.video .title, #o2o-msg-box .msg-show .title { border-radius:0 0 10px; }
+.canvas .title, #o2o-msg-box .msg-input .title { border-radius:0 0 0 10px; right:0; }

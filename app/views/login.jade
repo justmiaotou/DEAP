@@ -1,0 +1,27 @@
+!!! 5
+html
+    head
+        meta(charset='utf-8')
+        title #{title}
+        link(rel='stylesheet', href='/css/common.css')
+        link(rel='stylesheet', href='/css/login.css')
+        script(src='http://yui.yahooapis.com/3.5.0/build/yui/yui-min.js')
+    body
+        section.login-wrapper
+            header.g-header.login-hd
+                span.name 远程教育辅助平台
+                    sup beta
+            section.content
+                .login-bd
+                    form#login-form(action="", method="post")
+                        ul
+                            li
+                                label.ib(for="username") 用户名
+                                input#username.txt(name="username", type="text")
+                            li
+                                label.ib(for="passwd") 密&nbsp;&nbsp;&nbsp;码
+                                input#passwd.txt(name="password", type="text")
+                            .seperate
+                            a.signup(href="#") 
+                                label 注册
+                            input.submit(type="button", value="登&nbsp;录")

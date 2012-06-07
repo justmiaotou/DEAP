@@ -1,26 +1,49 @@
 extends tpls/media
 
 block script_head
-    script(src='localhost:8765//socket.io/socket.io.js')
+    script(src='/socket.io/socket.io.js')
 
 block css
-    link(rel='stylesheet', href='/stylesheets/o2o.css')
+    link(rel='stylesheet', href='/css/o2o.css')
 
 block header
-    h1 #{user.name} 的会话
+
+block mc-header
+    header.mc-header
+        h1 #{user.name} 的会话
+        section.connect-detail
+            label.lbl-conn(for="conn-addr") 对方ID：
+            input#conn-addr(type="text")
+            input.btn.btn-2(type="button", value="连接")
 
 block video
-    video()
+    section.video.ib
+        span.title 视频
+        video.com-block(width=400, height=300)
 
 block canvas
-//    canvas(width='800px', height='600px')
+    section.canvas.ib.relative
+        span.title 画板
+        canvas.com-block(width='400px', height='300px')
 
 block message_box
-    #o2o-msg-box
+    section#o2o-msg-box
+        section.msg-show.com-block.ib.vertical-b
+            span.title 聊天
+        section.msg-input.com-block.ib.relative
+            span.title 输入
+            textarea
+            input.submit(type="button", value="发送") 
 
 block script_foot
     script
-        console.log('script');
-        console.log('script');
-        console.log('script');
-        console.log('script');
+        YUI({
+            modules: {
+                media: {
+                    fullpath: /js/o2o.js,
+                    requires: []
+                }
+            }
+        }).use('media', function(Y) {
+            
+        });

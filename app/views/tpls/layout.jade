@@ -4,16 +4,31 @@ html
         meta(charset='utf-8')
         title #{title}
         - if(useCommonCss)
-            link(rel='stylesheet', href='/stylesheets/common.css')
+            link(rel='stylesheet', href='/css/common.css')
         block css
         - if (useYUI)
-            script(src='http://yui.yahooapis.com/3.5.0/build/yui/yui-min.js')
+            script(src='/js/yui-3.5.0.min.js')
+        - if (useJQuery)
+            script(src='/js/jquery-1.7.2.min.js')
         block script_head
     body
-        header.g-header
+        header.g-header.com-width
+            h1.name 远程教育辅助平台
+                sup beta
             block header
-        section.content
-            block content
+        section.main.com-width.clearfix
+            aside.fl.l-aside
+                ul.nav
+                    li
+                        a(href="#") 首页
+                    li
+                        a(href="#") 个人主页
+                    li
+                        a(href="#") 设置
+            .fr
+                .fl.content-wrapper
+                    block main-content
+                aside.fr.r-aside
         footer.g-footer
             block footer
         block script_foot

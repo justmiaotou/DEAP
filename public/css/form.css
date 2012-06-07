@@ -1,0 +1,65 @@
+@charset 'utf-8';
+
+/* common form style */
+.form h3 { padding:10px; font-weight:bold; border-bottom:2px dashed #999; }
+.form textarea { height:100px; max-height:100px; width:650px; max-width:650px; border:none; padding:10px; }
+.form input[type=text] { height:24px; padding-left:3px; }
+.form input[type=radio], .form input[type=checkbox] { cursor:pointer; }
+
+/* detail form */
+.detail-form .part { border-bottom:2px solid #777; }
+.detail-form .part1 { padding-bottom:10px; }
+.detail-form .detail-btn { float:right; margin-top:-32px; margin-right:10px; }
+#basic-info-tbl { margin-top:10px; font-size:14px; line-height:1.5; border-bottom:2px dashed #AAA; }
+#basic-info-tbl tr { border-bottom:2px solid #DDD; border-top:2px solid #DDD; }
+#basic-info-tbl th { padding-right:5px; text-align:right; height:30px; font-weight:bold; background:#EEE; }
+#basic-info-tbl td { padding-left:5px; text-align:left; }
+
+.part2 table { text-align:center; margin:0; font-size:14px; }
+.part2 td, .part2 th { height:30px; }
+.part2 th { border-bottom:2px solid #DDD; border-right:2px solid #DDD; background:#EEE; }
+.part2 td { border-right:2px solid #DDD; }
+.part2 .no-rborder { border-right:none; }
+
+.part5 { line-height:2; padding-bottom:10px; min-height:540px; }
+.part5 tr:hover td { background:#FEFBCF; }
+.part5 td { border-bottom:1px solid #CCC; padding-left:0px; font-size:14px; text-align:center; }
+.part5 .align-left { text-align:left; }
+.part5 .seperate { border-bottom:2px dashed #AAA; }
+.part5 .tbl-serv-call th, .part5 .tbl-marketing th { background:#EEE; border-bottom:1px solid #CCC; }
+.part5 .tbl-head .tbl-tab { border:2px solid #999; border-top:none; width:130px; height:30px; line-height:30px; background:#E8F2F1; overflow:hidden; cursor:pointer; border-radius:0 0 4px 4px; }
+.part5 .tbl-head .tbl-tab:hover { background:#CCE2E0; }
+.part5 .tbl-head .tbl-tab:active { background:#C0CECD; }
+.part5 .tbl-head .selected:after { content:'\25C6'; position:absolute; font-size:30px; left:57px; top:14px; color:#999; }
+.part5 .tbl-serv-call .selected, .part5 .tbl-marketing .selected { box-shadow:inset 0 0 10px gray; border-radius:4px; }
+
+.part6 { padding-bottom:10px; }
+.part6 label { display:inline-block; padding:0 3%; width:15%; height:30px; line-height:30px; text-align:center; vertical-align:top; border-right:1px solid #BBB; font-size:14px; background:linear-gradient(top, #BBB 0%, #DDD 10%, #EEE 50%,white 70% ,#DDD 90% ,#DDD 100%); background:-webkit-linear-gradient(top, #BBB 0%, #DDD 10%, #EEE 50%,white 70% ,#DDD 90% ,#DDD 100%); background:-moz-linear-gradient(top, #BBB 0%, #DDD 10%, #EEE 50%,white 70% ,#DDD 90% ,#DDD 100%); background:-ms-linear-gradient(top, #BBB 0%, #DDD 10%, #EEE 50%,white 70% ,#DDD 90% ,#DDD 100%); background:-o-linear-gradient(top, #BBB 0%, #DDD 10%, #EEE 50%,white 70% ,#DDD 90% ,#DDD 100%); }
+.part6 .exts { margin-bottom:10px; }
+.part6 .exts label { float:left; padding:0; height:30px; line-height:30px; width:25%; text-align:center; cursor:pointer; background:white; border:none; box-shadow:inset 0 0 4px gray; }
+.part6 .exts label:hover { background:#EEE; }
+.part6 input { width:78%; }
+.part6 .exts .selected { background:#DDD; }
+.part6 .ext5 label { width:140px; }
+.part6 .ext5 input { width:482px; }
+
+.part7 { position:relative; padding:4px 0; }
+
+/* search form */
+.search-form .tbl-search { }
+.search-form tr { line-height:40px; border-bottom:2px solid #CCC; }
+.search-form th { padding-left:20px; padding-right:10px; background:#EEE; }
+.search-form td { padding-left:10px; border-right:2px dashed #CCC; }
+.search-form .no-rborder { border-right:none; }
+.search-form .submit { margin:5px 0; }
+.search-form .detail-evaluate { padding-left:0; }
+.search-form .detail-evaluate > dl > dd { margin-left:0; }
+.search-form .detail-evaluate-type { background:#EEE; border-right:2px dashed #CCC; border-bottom:1px dashed #CCC; }
+.search-form .detail-evaluate-type input { margin-left:10px; }
+.search-form .detail-evaluate-type .expand { float:right; margin-right:20px; }
+.search-form .serv-list { border-right:2px dashed #CCC; margin-left:-2px; }
+.search-form .serv-list dt, .search-form .serv-list dd, .search-form .marketing-list dt, .search-form .marketing-list dd { border-left:1px dashed #DDD; border-bottom:1px dashed #DDD; padding:5px; }
+.search-form .serv-list dt, .search-form .marketing-list dt { border-top:1px dashed #CCC; }
+.search-form dd, .search-form dl, .search-form dt { position:relative; }
+.search-form .serv-list, .search-form .marketing-list, .search-form .serv-list dd, .search-form .marketing-list dd { margin-left:2em; line-height:1.5; }
+.search-form .detail-evaluate label { padding-left:5px; }
